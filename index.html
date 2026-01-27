@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRUM4 - FIERRODUQUE PRO FINAL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="vst-box">
+    <div class="header">
+        <div class="brand-line">
+            <div class="brand">DRUM<span>4</span></div>
+        </div>
+        <a href="https://www.fierroduque.com" target="_blank" class="web-link">fierroduque.com</a>
+    </div>
+
+    <div class="main-panel">
+        <div class="left-col">
+            <div class="fader-group">
+                <div class="fader-track">
+                    <input type="range" class="v-slider" id="gainFader" min="0" max="100" value="80">
+                </div>
+                <div class="lbl">MASTER</div>
+            </div>
+            <div class="fader-group">
+                <div class="fader-track">
+                    <input type="range" class="v-slider" id="attackFader" min="0" max="100" value="0">
+                </div>
+                <div class="lbl">ATTACK</div>
+            </div>
+        </div>
+
+        <div class="right-col">
+            <div class="knobs-row">
+                <div class="knob-wrapper">
+                    <div class="knob-circle" id="driveKnob">
+                        <div class="knob-pointer"></div>
+                    </div>
+                    <div class="lbl">DRIVE</div>
+                    <div class="val">0%</div>
+                </div>
+                <div class="knob-wrapper">
+                    <div class="knob-circle" id="filterKnob">
+                        <div class="knob-pointer"></div>
+                    </div>
+                    <div class="lbl">FILTER</div>
+                    <div class="val">OFF</div>
+                </div>
+                <div class="knob-wrapper">
+                    <div class="knob-circle" id="reverbKnob">
+                        <div class="knob-pointer"></div>
+                    </div>
+                    <div class="lbl">REVERB</div>
+                    <div class="val">0%</div>
+                </div>
+            </div>
+
+            <div class="pads-grid" id="padsArea"></div>
+        </div>
+    </div>
+
+    <div class="seq-panel">
+        <div class="transport">
+            <button class="play-btn" id="playBtn">▶ PLAY</button>
+            <div style="text-align:center">
+                <div style="font-size:0.6rem; color:#555;">BPM</div>
+                <input type="number" class="bpm-in" id="bpmInput" value="90">
+            </div>
+            <button class="reset-btn" id="resetBtn">↺ RESET</button>
+        </div>
+        <div class="timeline" id="seqGrid"></div>
+    </div>
+
+    <div class="visualizer-screen">
+        <canvas id="visCanvas"></canvas>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
